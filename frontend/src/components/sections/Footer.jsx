@@ -14,7 +14,7 @@ export const Footer = () => {
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
-        <div className="py-12 md:py-16 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="py-12 md:py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="lg:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-4">
@@ -63,6 +63,27 @@ export const Footer = () => {
                 { href: '#comparaison', label: 'Comparaison' },
                 { href: '#reflexion', label: 'Réflexion' },
                 { href: '#conclusion', label: 'Conclusion' },
+              ].map((link, index) => (
+                <li key={index}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal Links */}
+          <div>
+            <h3 className="font-heading font-semibold text-lg mb-4">Informations</h3>
+            <ul className="space-y-3">
+              {[
+                { href: '/mentions-legales', label: 'Mentions légales' },
+                { href: '/politique-de-confidentialite', label: 'Politique de confidentialité' },
+                { href: '/contact', label: 'Contact' },
               ].map((link, index) => (
                 <li key={index}>
                   <a
