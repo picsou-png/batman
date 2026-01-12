@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Brain, Heart, ExternalLink } from 'lucide-react';
 
 export const Footer = () => {
@@ -83,6 +84,19 @@ export const Footer = () => {
             <p className="text-sm text-primary-foreground/60">
               © {currentYear} IA & Société. Tous droits réservés.
             </p>
+            <div className="flex items-center gap-4 text-sm text-primary-foreground/60">
+              <Link to="/mentions-legales" className="hover:text-primary-foreground transition-colors">
+                Mentions légales
+              </Link>
+              <span>|</span>
+              <Link to="/confidentialite" className="hover:text-primary-foreground transition-colors">
+                Politique de confidentialité
+              </Link>
+              <span>|</span>
+              <Link to="/contact" className="hover:text-primary-foreground transition-colors">
+                Contact
+              </Link>
+            </div>
             <p className="flex items-center gap-1 text-sm text-primary-foreground/60">
               Fait avec <Heart className="w-4 h-4 text-danger" /> pour un avenir éclairé
             </p>
